@@ -1,0 +1,867 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* BORDER BOX EMPÊCHENT LES BOÎTES DE GRANDIR AVEC LES PADDING */
+}
+
+
+/* html{
+    scroll-behavior: smooth;
+} */
+
+body{
+    font-family: 'Oswald', sans-serif;
+    color:#FAF9F2 ;
+    background-color: #050509;
+    margin: 50px;
+}
+
+img{
+   /* garder ratio d'une image  */
+   object-fit: cover;
+   /* reponsive */
+   display: block;
+   max-width: 100%;
+}
+
+
+.flex{
+    display: flex;
+    flex-direction: row;
+    /* justify-content: space-between;
+    align-items: center; */
+}
+
+.column{
+    flex-direction: column;
+}
+
+h2{
+    font-size: clamp(75px, 10vw, 173px);
+}
+
+h3{
+    font-size: clamp(40px, 8vw, 80px);
+    font-weight: 300;
+}
+
+p{
+    font-size: clamp(16px, 10vw, 24px);
+    /* font-weight: lighter; */
+}
+
+p1,
+p2,
+p3{
+    font-size: clamp(16px, 10vw, 24px);
+    font-weight: 400;
+     /* font-weight: lighter; */
+}
+
+/* .italic{
+    font-style: italic;
+}
+
+.bold{
+    font-weight: 600;
+} */
+
+/* ======================= GLOW EFFECT ======================= */
+.glow1 {
+    animation: glow1 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow1 {
+    from {
+      text-shadow: 0 0 10px #FAF9F2,0 0 20px #e60721, 0 0 25px #e60721;
+        }
+    to {
+      text-shadow: 0 0 10px #FAF9F2, 0 0 20px #68020e,0 0 25px #68020e;
+    }
+  } 
+
+.glow2 {
+    animation: glow2 1.5s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow2 {
+    from {
+      text-shadow: 0 0 10px #FAF9F2,0 0 20px #2f6b4a, 0 0 25px #2f6b4a;
+        }
+    to {
+      text-shadow: 0 0 10px #FAF9F2, 0 0 20px #013A11,0 0 25px #013A11;
+    }
+  }
+
+.glow3 {
+    animation: glow3 1s ease-in-out infinite alternate;
+  }
+  
+  @keyframes glow3 {
+    from {
+      text-shadow: 0 0 10px #FAF9F2,0 0 20px #e493ba, 0 0 25px #e493ba;
+        }
+    to {
+      text-shadow: 0 0 10px #FAF9F2, 0 0 20px #ca5a90,0 0 25px #ca5a90;
+    }
+  } 
+
+/* ========================== HEADER ================================= */
+
+header{
+    /* margin-bottom:60px; */
+    justify-content: flex-end;
+    margin-right: 50px;
+}
+
+nav{
+    gap: 100px;
+}
+
+nav a{
+    text-decoration: none;
+    color:#FAF9F2 ;
+    font-size: 20px;
+    letter-spacing: 5px;
+}
+
+.burger .line1,
+.burger .line3{
+    width: 40px;
+    height: 5px;
+    background: #FAF9F2 ;
+    margin: 7px 0;   
+}
+
+.burger .line2{
+    width: 22px;
+    height: 3px;
+    background: #FAF9F2 ;
+    margin: 7px 0;
+}
+.burger{
+    display: none;
+    cursor: pointer;
+}
+
+.burger div{
+    transition : all 0.3s ease;
+}
+
+.hover-lis:hover{ 
+    color: #9B0214; 
+}
+.hover-trinity:hover{ 
+    color: #AADFC2; 
+}
+
+.hover-barbie:hover{ 
+    color: #F7B2D3; 
+}
+
+.hover-conclusion:hover{ 
+    color: #2b2b2b; 
+}
+
+/*====================== HOMEPAGE ========================== */
+
+h1{
+    font-size: 100px;   
+    font-weight: 700;
+    margin: auto;
+    /* line-height: 1.6; */
+    letter-spacing: 5px;
+    font-family: 'Anton', sans-serif;
+}
+
+.gallery-homepage{
+    flex-direction: row;
+    /* justify-content: flex-end; */
+    align-items: flex-end;
+    gap: 24px;
+    margin: auto;
+    /* width: 621px;
+    height: 542px; */
+    object-fit: cover;
+}
+
+.gallery-homepage img{
+    transition: .5s ease-in-out
+}
+
+.gallery-homepage img:hover{
+    transform: scale(1.2);
+}
+
+.homepage{
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 70px;
+    margin-bottom: 120px;
+    flex-wrap: wrap;
+}
+
+.gallery-homepage-responsive{
+    display: none;
+}
+
+/*====================== SECTION LISBETH ========================== */
+
+
+/* section lizbeth a */
+
+.img-lis{
+    box-shadow: -30px 50px #9B0214;
+}
+
+li{
+    font-size: clamp(95px, 10vw, 173px);   
+    /* color: #9B0214; */
+}
+
+ol{
+    list-style: none;
+}
+
+ol li.li-lis::before{
+    content: "1.";
+    color: #FAF9F2;
+    display: inline-block;  
+    width: 1em;
+    margin-left : -1em;
+    font-size: clamp(75px, 10vw, 100px);  
+    font-weight: 700;
+    }
+
+.h3-lis{
+    color: #9B0214;
+    line-height: 10px;
+    margin-bottom: 40px;
+    margin-left : .1em;
+}
+
+.para-lis-a{
+    margin-top: 40px;
+    line-height: 2;
+    /* width: min( 600px, 100%); */
+}
+
+.lis-a{
+    margin-bottom: 160px;
+    gap: 250px;
+}
+
+.container-lis-responsive{
+    display: none;
+}
+
+/* section lizbeth b */
+
+.galleryb-lis{
+    flex-direction : row-reverse;
+}
+
+.para-lis-b{ 
+    width: min(534px, 95%);
+    /* justify-content: space-around; */
+}
+
+.p1-lis,
+.p2-lis{
+    line-height: 1.8;
+    margin-top: 50px;
+
+}
+
+.lis-b{
+    /* width: min(1288px, 95%); */
+    justify-content: space-between;
+    margin-bottom: 180px;
+    gap: 160px;
+}
+
+.lis-b-responsive{
+    display: none;
+}
+
+/*====================== SECTION TRINITY ========================== */
+
+/* section trinity a */
+
+.img-trinity{
+    box-shadow: 30px 50px #AADFC2;
+
+}
+
+.li-trinity{
+    font-size: clamp(95px, 10vw, 173px);   
+    /* color: #AADFC2; */
+}
+
+
+ol li.li-trinity::before {
+    content: "2.";
+    color: #FAF9F2;
+    display: inline-block;  
+    width: 1em;
+    /* margin-left : -1em; */
+    font-size: clamp(75px, 10vw, 120px);  
+    font-weight: 700;
+    }
+
+.h3-trinity{
+    color: #AADFC2;
+    line-height: 1px;
+    margin-bottom: 40px;
+    margin-left : 1.7em;
+}
+
+.para-trinity-a{
+    margin-top: 40px;
+    line-height: 1.8;
+    width: min( 600px, 95%);
+    margin-left:6em ;
+}
+
+.trinity-a{
+    /* width: min(1300px, 90%); */
+    margin-bottom: 150px;
+}
+
+.container-trinity-responsive{
+    display: none;
+}
+
+/* section trinity b */
+
+a{
+    color: #AADFC2;
+    text-decoration: underline ;
+    font-size: clamp(18px, 10vw, 20px);
+    line-height: 1.5;
+}
+
+.para-trinity-b{ 
+    width: min(534px, 100%);
+    justify-content:center;
+    align-items: flex-end;
+    gap: 30px;
+}
+
+.p1-trinity{
+    line-height: 1.8;
+    font-size: clamp(16px,10vw,24px);
+
+}
+
+.trinity-b{
+    /* width: min(1288px, 95%); */
+    justify-content: space-between;
+    margin-bottom: 180px;
+}
+
+/* .galleryb-trinity{
+    border: 2px solid red;
+} */
+
+.trinity-b-responsive{
+    display: none;
+}
+
+
+
+
+
+
+/*====================== SECTION BARBIE ========================== */
+
+
+/* section barbie a */
+
+.img-barbie{
+    box-shadow: -30px 50px #F7B2D3;
+}
+
+.li-barbie{
+    font-size: clamp(95px, 10vw, 173px);   
+    /* color: #F7B2D3; */
+}
+
+ol li.li-barbie::before{
+    content: "3.";
+    color: #FAF9F2;
+    display: inline-block;  
+    width: 1em;
+    margin-left : -1em;
+    font-size: clamp(75px, 10vw, 100px);  
+    font-weight: 700;
+    }
+
+.h3-barbie{
+    color: #F7B2D3;
+    line-height: 1px;
+    margin-bottom: 40px;
+    margin-left : .1em;
+ 
+}
+
+.para-barbie-a{
+    margin-top: 40px;
+    line-height: 200%;
+    width: min( 600px, 100%);
+}
+
+.barbie-a{
+    gap: 170px;
+    /* width: min(1300px, 100%); */
+    margin-bottom: 60px;
+    
+}
+
+.container-barbie-responsive{
+    display : none;
+}
+
+/* section barbie b */
+
+h4{
+    color: #F7B2D3;
+    font-weight: 600;
+    font-size: 47px;
+}
+
+.barbie-b{
+    /* border: 2px solid yellow; */
+    justify-content: space-between;
+    margin-top: 120px;
+    padding: 0px 50px;
+    flex-wrap: wrap;
+}
+.container-barbie-b{
+    /* border: 2px solid pink; */
+    width: min(585px, 95%);
+    /* gap: 20px; */
+}
+
+.para-barbie-b{
+    /* width: min( 600px, 100%); */
+    line-height: 1.8;
+}
+
+/* section barbie c */
+
+.barbie-c{
+    /* border: 2px solid yellow; */
+    justify-content: space-between;
+    align-items: center;
+    /* gap: 95px; */
+    margin-top: 70px;
+    margin-bottom: 180px;
+    padding: 0px 50px;
+    flex-wrap: wrap-reverse;
+}
+.container-barbie-c{
+    /* border: 2px solid pink; */
+    width: min(585px, 95%);
+}
+
+.para-barbie-c{
+    margin-top: 30px;
+    /* width: min( 600px, 100%); */
+    line-height: 1.8;
+}
+
+/* CARROUSEL */
+
+.slider{
+    width: 371.43px;
+    overflow: hidden;
+}
+
+.slides{
+    width: calc(371.43px*3);
+    animation: glisse 10s infinite;
+}
+
+.slide{
+    float: left;
+}
+
+@keyframes glisse{
+    0%{
+        transform: translateX(0);
+    }
+    13%{
+        transform: translateX(0);
+    }
+    33%{
+        transform: translateX(-371.43px);
+    }
+    43%{
+        transform: translateX(-371.43px);
+    }
+   66%{
+        transform: translateX(-742.86px);
+    }
+    76%{
+        transform: translateX(-742.86px);
+    }
+    100%{
+        transform: translateX(0);
+    }
+}
+
+
+
+
+/* ================ SECTION QUOTE =============== */
+blockquote{
+    color: #050509;
+    background-color: #FAF9F2;         
+    font-weight: 500;
+    font-size: clamp(18px,3vw,30px);
+    line-height: 200%;
+    padding:50px;
+    width: 80%;
+    margin: auto;
+    text-align: justify;
+}
+
+.openquote {
+     float: left;
+     height: 45px;
+     margin-top: -40px;
+     margin-left: -60px;
+     margin-bottom: -50px;
+     font-size: 356px;
+     color:#FAF9F2;
+}
+
+.closequote {
+    float: right;
+    /* height: 50px; */
+    margin-top: 109px;
+    padding-top: 98px;
+    margin-right: -60px;
+    font-size: 356px;
+    color:#FAF9F2;
+    }
+
+/* ================ FOOTER =============== */
+
+hr{
+    margin-top : 200px;
+    margin-bottom: 30px;
+ }
+
+ .happyend p,
+ footer p{
+    letter-spacing: 7px;
+    font-size: clamp(16px, 6vw, 18px);
+    /* line-height: 40px; */
+    font-family: 'Oswald', sans-serif;
+    font-weight: lighter;
+    }
+
+.linkedin{
+    text-decoration: none;
+    color:#FAF9F2;
+    font-size: clamp(16px, 6vw, 18px);
+}
+
+.contact{
+    font-weight: bolder;
+}
+
+footer{
+    justify-content: center;
+    align-items: center;
+}
+
+.coeur{
+    display: inline-block;
+}
+
+/* ======================== MEDIA QUERIES ================================== */
+@media (max-width:670px){
+   
+    body{
+        overflow-x: hidden;
+}
+
+h2,h3,li{
+    text-align: center;
+}
+
+
+ /* ================== MENU BURGER - RESPONSIVE =========================== */
+   nav{
+        position:absolute;
+        right: 0px;
+        height: 92vh;
+        top:15vh;
+        background-color: #FAF9F2;
+        flex-direction: column !important;
+        justify-content: center;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+    }
+
+    nav a{
+        color:#050509;
+        font-size: 24px;
+        letter-spacing: 5px;
+        font-weight: 700;
+        text-transform: uppercase;
+        /* opacity:0; */
+    }
+
+    .burger{
+        display: block;
+    }
+
+    .nav-active{
+        transform: translateX(0%);
+    }
+
+@keyframes navLinkFade{
+    from{
+        opacity: 0;
+        transform: translateX(50px)
+    }
+
+    to{
+        opacity: 1;
+        transform: translateX(0px);
+    }
+}
+
+.toggle .line1{
+    transform: rotate(-45deg) translate(-5px,6px);
+}
+.toggle .line2{
+    opacity: 0;
+}
+.toggle .line3{
+    transform: rotate(45deg) translate(-5px,-6px);
+}
+
+
+.hover-lis{ 
+    color: #9B0214; 
+}
+.hover-trinity{ 
+    color: #AADFC2; 
+}
+
+.hover-barbie{ 
+    color: #F7B2D3; 
+}
+
+.hover-conclusion:hover{ 
+    color: #18181a; 
+}
+
+header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* ================================== HOMEPAGE - RESPONSIVE ================================= */
+
+h1{
+    font-size: clamp(50px,8vw,100px);
+    text-align: center;
+}
+
+.gallery-homepage-responsive{
+    display: block;
+    margin: 0%;
+}
+
+.gallery-homepage{
+    display: none;
+}
+
+.homepage{
+    justify-content: center;
+    gap: 30px;
+}
+
+
+/* ================================== LISBETH - RESPONSIVE ================================= */
+
+/* ========== lisbeth-a responsive================ */
+.container-lis-responsive{
+    display: block; 
+    margin-bottom: 80px;
+}
+
+.h3-lis{
+    margin-bottom: 80px;
+    margin-left : -.9em;
+}
+
+
+#lisbeth{
+    display: none;
+}
+
+.img-lis-responsive{
+    box-shadow: -30px 30px #9B0214;
+}
+
+.para-lis-a{
+    margin-top: 60px;
+    line-height: 1.4;
+}
+
+.center-img{
+    align-items: center;
+    justify-content: center;
+}
+
+
+
+/* ========== lisbeth-b responsive================ */
+
+.lis-b-responsive{
+    display: block;
+    margin-bottom: 80px;
+}
+
+.lis-b{
+    display: none;
+}
+
+.galleryb-lis-responsive{
+    justify-content: center;
+    margin-bottom: 50px;
+}
+
+.p1-lis-responsive{
+    line-height: 1.4;
+}
+
+
+.p2-lis-responsive{
+    margin-bottom: 50px;
+    line-height: 1.4;
+}
+
+
+
+
+
+/* ========== trinity-a responsive================ */
+
+#trinity{
+    display: none;
+}
+.h3-trinity{
+    margin-bottom: 80px;
+    margin-left : .5em;
+}
+
+.container-trinity-responsive{
+    display: block;
+    margin-bottom: 50px;
+}
+
+.img-trinity-responsive{
+    box-shadow: -30px 30px #AADFC2;
+}
+
+.para-trinity-a{
+    margin-left: 0;
+    width: min(0);
+    margin-top: 60px;
+    margin-bottom: 60px;
+
+}
+
+
+/* ========== trinity-b responsive================ */
+
+.trinity-b{
+    display: none;
+}
+
+.trinity-b-responsive{
+    display: block;
+    margin-bottom: 80px;
+}
+
+.galleryb-trinity-responsive{
+    gap: 10px;
+    margin-bottom: 30px;
+}
+
+.p1-trinity{
+    line-height: 1.4;
+}
+
+/* ================================== BARBIE - RESPONSIVE ================================= */
+/* ========== barbie-a responsive================ */
+
+#barbie{
+    display: none;
+}
+
+.container-barbie-responsive{
+    display: block;
+}
+
+.img-barbie-responsive{
+    box-shadow: -30px 30px #e493ba;
+}
+
+.para-barbie-a{
+    line-height: 1.4;
+    margin-top: 80px;
+}
+
+.h3-barbie{
+    margin-bottom: 80px;
+    margin-left : -.7em;
+}
+/* ========== barbie-b responsive================ */
+
+.barbie-b{
+    margin-top: 40px;
+    gap: 30px;
+    margin-bottom:40px;
+
+}
+
+h4{
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.para-barbie-b{
+    line-height: 1.4;
+}
+
+/* ========== barbie-c responsive================ */
+
+.barbie-c{
+    gap: 30px;
+    margin-bottom:180px;
+}
+
+.para-barbie-c{
+    margin-bottom: 50px;
+
+}
+/* ================================== FOOTER- RESPONSIVE ================================= */
+
+footer p{
+    text-align: center;
+}
+
+}
